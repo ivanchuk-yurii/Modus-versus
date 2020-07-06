@@ -1,0 +1,47 @@
+.card {
+  text-align: center;
+
+  &__img {
+    font-family: FontAwesome;
+    font-size: 60px;
+    font-weight: 400;
+    color: $mark-color-first;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: $text-color_title;
+
+    margin-top: 15px;
+  }
+
+  &__description {
+    height: 80px;
+    font-size: 13px;
+    line-height: 20px;
+    color: $text-color_main;
+
+    margin-top: 35px;
+  }
+
+  &__button {
+    font-size: 14px;
+    margin-top: 60px;
+
+    @include button($mark-color-first, $mark-color-first_dark);
+  }
+
+  &-active {
+    .card {
+      &__img {
+        color: $mark-color-second;
+      }
+
+      &__button {
+        @include button($mark-color-second, $mark-color-second_dark);
+      }
+    }
+  }
+}

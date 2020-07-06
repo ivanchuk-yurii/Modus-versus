@@ -1,0 +1,38 @@
+.advantages {
+  &__title {
+    font-size: 16px;
+    font-weight: 800;
+    color: $text-color_title;
+  }
+
+  &__list {
+    margin-top: 37px;
+  }
+
+  &__item {
+    font-size: 13px;
+    color: $text-color_main;
+
+    &:not(:first-child) {
+      margin-top: 11px;
+    }
+
+    &::before {
+      content: "";
+      font-family: FontAwesome;
+      font-size: 12px;
+      color: $mark-color_second;
+      margin-right: 6px;
+    }
+  }
+
+  @media (max-width: $screen-small) {
+    &__title {
+      font-size: 13px;
+    }
+
+    &__item {
+      font-size: 11px;
+    }
+  }
+}

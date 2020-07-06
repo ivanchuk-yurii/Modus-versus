@@ -1,0 +1,40 @@
+@mixin button($bgc, $bc) {
+  background-color: $bgc;
+  border-bottom-color: $bc;
+  transition: background-color $transition-time;
+
+  @media (min-width: $screen-large) {
+    &:hover {
+      background-color: $bc;
+    }
+  }
+}
+
+@mixin diagram ($size, $per, $c1, $c2) {
+  position: relative;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-width: $size;
+    border-style: solid;
+    border-bottom: none;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  }
+
+  &::before {
+    border-color: $c1;
+  }
+
+  &::after {
+    border-color: $c2;
+    transform-origin: center bottom;
+    transform: rotate((100 - $per) * -1.8deg);
+  }
+}

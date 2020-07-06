@@ -1,0 +1,41 @@
+.blog {
+  color: $text-color_second;
+
+  &__title {
+    font-size: 20px;
+    font-style: italic;
+
+    &-strong {
+      font-weight: 700;
+      font-style: normal;
+      text-transform: uppercase;
+    }
+  }
+
+  &__card {
+    display: grid;
+    grid-template-areas: "img text"
+      "img data";
+
+    grid-gap: 0 18px;
+    font-size: 13px;
+    margin-top: 22px;
+  }
+
+  &__img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    grid-area: img;
+  }
+
+  &__text {
+    grid-area: text;
+  }
+
+  &__data {
+    grid-area: data;
+
+    color: $text-color_third;
+  }
+}

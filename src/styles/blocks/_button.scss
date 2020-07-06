@@ -1,0 +1,15 @@
+.button {
+  width: 200px;
+  height: 50px;
+
+  color: $text-color_second;
+  font-weight: 600;
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  border-radius: 5px;
+
+  &:active {
+    border-bottom: none;
+    transform: translateY(5px);
+  }
+}

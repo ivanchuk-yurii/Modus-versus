@@ -1,0 +1,18 @@
+@import "../fonts/fonts.css";
+@import "./units";
+@import "./reset";
+@import "./blocks";
+@import "./sections";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1;
+}

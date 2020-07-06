@@ -1,0 +1,44 @@
+.feedback {
+  &__title {
+    font-size: 16px;
+    font-weight: 800;
+    color: $text-color_title;
+  }
+
+  &__text {
+    max-width: 266px;
+    margin: 39px 0 30px;
+    padding-left: 19px;
+  
+    font-size: 13px;
+    line-height: 24px;
+    font-style: italic;
+    color: $text-color_main;
+
+    &-accent {
+      font-style: normal;
+    }
+  }
+
+  &__author {
+    font-size: 16px;
+    font-weight: 600;
+    color: $text-color_title;
+
+    margin-left: 62px;
+  }
+
+  @media (max-width: $screen-small) {
+    &__title {
+      font-size: 13px;
+    }
+
+    &__text {
+      font-size: 11px;
+    }
+
+    &__author {
+      font-size: 13px;
+    }
+  }
+}

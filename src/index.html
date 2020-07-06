@@ -1,13 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>FE Template</title>
-        <link rel="stylesheet" href="style.scss">
-        <script type="module" src="main.js"></script>
-    </head>
-    <body>
-        <h1>Template</h1>
-    </body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modus versus</title>
+    <link rel="stylesheet" href="styles/main.scss">
+    <script type="module" src="script/burger.js"></script>
+    <script type="module" src="script/portfolio.js"></script>
+    <script type="module" src="script/header-slider.js"></script>
+    <script type="module" src="script/features-slider.js"></script>
+  </head>
+  <body>
+    <header class="header" id="promo">
+      <div class="header__links">
+        <div class="container header__container">
+          <nav class="header__nav">
+            <a href="#" class="logo">
+              <strong class="logo__strong">Modus</strong>
+              versus
+            </a>
+  
+            <ul class="header__list nav-list"  id="nav-list">
+              <li class="nav-list__item">
+                <a href="#promo" class="nav-list__link nav-list__link-home">Home</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="" class="nav-list__link">About</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="#services" class="nav-list__link">Services</a>
+              </li>
+              <li class="nav-list__item nav-list__item-menu">
+                <button
+                  class="nav-list__link nav-list__link-button"
+                  id="portfolio-btn"
+                >
+                  Portfolio
+                </button>
+                <ul class="nav-list__portfolio-list" id="portfolio-list">
+                  <li class="nav-list__portfolio-item">Portfolio 2 column page</li>
+                  <li class="nav-list__portfolio-item">Portfolio 2 column page</li>
+                  <li class="nav-list__portfolio-item">Portfolio 2 column page</li>
+                </ul>
+              </li>
+              <li class="nav-list__item">
+                <a href="#" class="nav-list__link">Blog</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="#features" class="nav-list__link">Features</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="#contact" class="nav-list__link">Contacts</a>
+              </li>
+            </ul>
+
+            <div class="header__buttons">
+              <a href="#" class="header__loupe"></a>
+  
+              <div class="burger" id="burger">
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header__content">
+        <h1 class="header__title">Vestibulum</h1>
+        <div class="header__text">
+          <button class="header__arrow header__arrow-left" id="header-prev"></button>
+          <p class="header__description">
+            Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.
+          </p>
+          <button class="header__arrow header__arrow-right" id="header-next"></button>
+        </div>
+
+        <div class="header__slides" id="header-carousel">
+          <img src="./img/slider/1.jpg" alt="city" class="header__slide">
+          <img src="./img/slider/2.jpg" alt="city" class="header__slide">
+          <img src="./img/slider/3.jpg" alt="city" class="header__slide">
+        </div>
+      </div>
+
+      <div class="header__control" id="header-dots">
+        <div class="header__rectangle" data-dot="0"></div>
+        <div class="header__rectangle header__rectangle-active" data-dot="1"></div>
+        <div class="header__rectangle" data-dot="2"></div>
+      </div>
+    </header>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="services__info">
+          <h2 class="services__title">Some of our top services</h2>
+          <p class="services__description">
+            Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.
+          </p>
+          <button class="button services__more">View more</button>
+        </div>
+
+        <div class="services__content">
+          <div class="services__item card card-active">
+            <div class="card__img"></div>
+            <h3 class="card__title">Suspendise</h3>
+            <p class="card__description">
+              Quisque id tellus quis risus vehicula vehicula ut turpis. In eros nulla, placerat vitae at, vehicula ut nunc.
+            </p>
+            <button class="card__button button">read more</button>
+          </div>
+          <div class="services__item card">
+            <div class="card__img"></div>
+            <h3 class="card__title">Maecens</h3>
+            <p class="card__description">
+              Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.
+            </p>
+            <button class="card__button button">read more</button>
+          </div>
+          <div class="services__item card">
+            <div class="card__img"></div>
+            <h3 class="card__title">Aliquam</h3>
+            <p class="card__description">
+              Vivamus eget ante bibendum arcu vehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor non.
+            </p>
+            <button class="card__button button">read more</button>
+          </div>
+          <div class="services__item card">
+            <div class="card__img"></div>
+            <h3 class="card__title">Habitasse</h3>
+            <p class="card__description">
+              Astehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor non.
+            </p>
+            <button class="card__button button">read more</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="features__title">Why Modus versus?</h2>
+        <p class="features__description">
+          Capacitance cascading integer reflective interface data development high bus cache dithering transponder.
+        </p>
+  
+        <div class="features__content">
+          <img
+            src="./img/features/3.jpg"
+            alt="Kremlin"
+            class="features__img features__img-right"
+          >
+          <img
+            src="./img/features/1.jpg"
+            alt="New York"
+            class="features__img features__img-main"
+          >
+          <img
+            src="./img/features/2.jpg"
+            alt="New York"
+            class="features__img features__img-left"
+          >
+
+          <div class="features__advantages advantages">
+            <h3 class="advantages__title">Why Choose Us ?</h3>
+            <ul class="advantages__list">
+              <li class="advantages__item">Quisque at massa ipsum </li>
+              <li class="advantages__item">Maecenas a lorem augue, egestas </li>
+              <li class="advantages__item">Cras vitae felis at lacus eleifend </li>
+              <li class="advantages__item">Etiam auctor diam pellentesque </li>
+              <li class="advantages__item">Nulla ac massa at dolor </li>
+              <li class="advantages__item">Condimentum eleifend vitae vitae</li>
+            </ul>
+          </div>
+
+          <p class="features__text">
+            Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam pellentesque lectus <em class="features__text-accent">vehicula mattis</em>. Nulla ac massa at dolor condimentum eleifend vitae vitae urna.
+          </p>
+
+          <div class="features__diagrams">
+            <div class="features__diagram diagram">
+              <div class="diagram__circle diagram__circle-50">50</div>
+              <div class="diagram__title">Suspendise</div>
+            </div>
+            <div class="features__diagram diagram">
+              <div class="diagram__circle diagram__circle-70">70</div>
+              <div class="diagram__title">Maecenas</div>
+            </div>
+            <div class="features__diagram diagram">
+              <div class="diagram__circle diagram__circle-80">80</div>
+              <div class="diagram__title">Aliquam</div>
+            </div>
+            <div class="features__diagram diagram">
+              <div class="diagram__circle diagram__circle-100">100</div>
+              <div class="diagram__title">Habitasse</div>
+            </div>
+          </div>
+
+          <div class="features__feedback feedback">
+            <h3 class="feedback__title">What Client’s Say ?</h3>
+            <p class="feedback__text">
+              Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam pellentesque lectus vehicula mattis.
+              <span class="feedback__text-accent">Nulla ac massa at dolor condimentum</span>
+            </p>
+            <a
+              href="https://www.facebook.com/theejohndoe/"
+              class="feedback__author"
+              target="_blank"
+              rel="noopener"
+            >
+              John Doe
+            </a>
+          </div>
+        </div>
+
+        <div class="features__slider slider">
+          <h3 class="slider__title">Our Happy Clients</h3>
+          <div class="slider__underline"></div>
+          <div class="slider__buttons">
+            <button class="slider__button" id="features-prev"></button>
+            <button class="slider__button" id="features-next"></button>
+          </div>
+          <div class="slider__content" id="features-carousel">
+            <img src="./img/clients/client1.png" alt="jQuery" class="slider__slide">
+            <img src="./img/clients/client1.png" alt="jQuery" class="slider__slide">
+            <img src="./img/clients/client1.png" alt="jQuery" class="slider__slide">
+            <img src="./img/clients/client1.png" alt="jQuery" class="slider__slide">
+            <img src="./img/clients/client1.png" alt="jQuery" class="slider__slide">
+            <img src="./img/clients/client1.png" alt="jQuery" class="slider__slide">
+            <img src="./img/clients/client1.png" alt="jQuery" class="slider__slide">
+            <img src="./img/clients/client1.png" alt="jQuery" class="slider__slide">
+            <img src="./img/clients/client1.png" alt="jQuery" class="slider__slide">
+            <img src="./img/clients/client1.png" alt="jQuery" class="slider__slide">
+            <img src="./img/clients/client1.png" alt="jQuery" class="slider__slide">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="contact">
+      <div class="footer__content container">
+        <div class="footer__info info">
+          <a href="#" class="info__logo logo">
+            <strong class="logo__strong">Modus</strong>
+            versus
+          </a>
+          <p class="info__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec.
+          </p>
+          <p class="info__contact">
+            Phone:
+            <a href="tel:18225695896" class="info__link">182 2569 5896</a>
+          </p>
+          <p class="info__contact">
+            e-mail:
+            <a href="mailto:info@modu.versus" class="info__link">info@modu.versus</a>
+          </p>
+        </div>
+
+        <div class="footer__links footer__links-company">
+          <h3 class="footer__title">Company</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link">About</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">FAQ</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Contact</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Terms</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Privacy</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Testimonials</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__links footer__links-community">
+          <h3 class="footer__title">Community</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link">Blog</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Forum</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Support</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Newsletter</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__blog blog">
+          <h3 class="blog__title">
+            from the
+            <strong class="blog__title-strong">Blog</strong>
+          </h3>
+          <div class="blog__card">
+            <img src="./img/blog/1.png" alt="blog" class="blog__img">
+            <p class="blog__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </p>
+            <time datetime="2013-05-26" class="blog__data">26 May, 2013</time>
+          </div>
+          <div class="blog__card">
+            <img src="./img/blog/1.png" alt="blog" class="blog__img">
+            <p class="blog__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </p>
+            <time datetime="2013-05-26" class="blog__data">26 May, 2013</time>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__footer">
+        <div class="container footer__about">
+          <span class="footer__from">2013  ModusVersus</span>
+
+          <div class="footer__social social">
+            <a
+              href="https://www.facebook.com/"
+              class="social__link"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="./img/social/fb.png"
+                alt="facebook"
+                class="social__img"
+              >
+            </a>
+            <a
+              href="https://uk.wikipedia.org/wiki/Google%2B"
+              class="social__link"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="./img/social/g.png"
+                alt="google plus"
+                class="social__img"
+              >
+            </a>
+            <a
+              href="https://twitter.com/"
+              class="social__link"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="./img/social/tw.png"
+                alt="twitter"
+                class="social__img"
+              >
+            </a>
+            <a
+              href="https://uk.wikipedia.org/wiki/RSS"
+              class="social__link"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="./img/social/rs.png"
+                alt="rss"
+                class="social__img"
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

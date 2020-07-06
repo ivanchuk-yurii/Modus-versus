@@ -1,0 +1,22 @@
+.info {
+  color: $text-color_second;
+  font-size: 13px;
+
+  &__description {
+    margin: 33px 0;
+    line-height: 23px;
+  }
+
+  &__contact {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__link {
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+    margin-left: 20px;
+  }
+}

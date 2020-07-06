@@ -1,0 +1,67 @@
+.services {
+  padding: 0 20px 124px;
+
+  &__info {
+    display: grid;
+    grid-template-areas: "title button"
+      "text button";
+    grid-gap: 5px 80px;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 600;
+    color: $text-color_title;
+
+    grid-area: title;
+  }
+
+  &__description {
+    font-size: 13px;
+    color: $text-color_main;
+
+    grid-area: text;
+  }
+
+  &__more {
+    font-size: 20px;
+
+    grid-area: button;
+
+    @include button($mark-color-second, $mark-color-second_dark);
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, min-content);
+    justify-content: space-between;
+    margin-top: 128px;
+  }
+
+  &__item {
+    max-width: 240px;
+  }
+
+  @media (max-width: $screen-large) {
+    &__content {
+      grid-template-columns: repeat(2, min-content);
+      justify-content: space-around;
+      row-gap: 50px;
+    }
+  }
+
+  @media (max-width: $screen-small) {
+    padding-bottom: 75px;
+
+    &__info {
+      grid-template-areas: "title"
+        "text" "button";
+      row-gap: 20px;
+    }
+
+    &__content {
+      grid-template-columns: min-content;
+      margin-top: 75px;
+    }
+  }
+}

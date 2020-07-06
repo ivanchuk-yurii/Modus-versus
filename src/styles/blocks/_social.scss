@@ -1,0 +1,12 @@
+.social {
+  &__link {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+
+  &__img {
+    max-width: 22px;
+    max-height: 22px;
+  }
+}
